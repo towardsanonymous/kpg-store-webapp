@@ -10,6 +10,7 @@ import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import ListIcon from '@mui/icons-material/List';
 import SettingsIcon from '@mui/icons-material/Settings';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import Badge from '@mui/material/Badge';
 
 export default function Footer() {
   const [value, setValue] = React.useState('recents');
@@ -48,8 +49,8 @@ export default function Footer() {
       alignItems: 'center',
     }}
   >
-    <HomeIcon />
-    <span style={{ marginTop: '2px' }}>Home</span>
+    <HomeIcon style={{ color: "green" }} />
+    <span style={{ marginTop: '2px' ,color: "green" }}>Home</span>
   </button>
   <button
     onClick={() => handleChange('past')}
@@ -70,7 +71,7 @@ export default function Footer() {
     className='position-relative'
     onClick={() => handleChange('notifications')}
     style={{
-      padding: '5px',
+      padding: '15px',
       border: 'none',
       background: 'none',
       cursor: 'pointer',
@@ -79,10 +80,13 @@ export default function Footer() {
       alignItems: 'center',
     }}
   >
-    <div className='nearMe-button'></div>
-    <span className="position-absolute  translate-middle badge rounded-pill bg-danger" style={{left:"50px" ,top:"-0.5rem"}}>
+       <Badge badgeContent={1} sx={{top:'-9px',right:'-4px'}} color="secondary">
+       <div className='nearMe-button'></div>
+       </Badge>
+ 
+    {/* <span className="position-absolute  translate-middle badge rounded-pill bg-danger" style={{left:"50px" ,top:"-0.5rem"}}>
       5
-    </span>
+    </span> */}
 
   </button>
   <button

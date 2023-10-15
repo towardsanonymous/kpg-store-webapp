@@ -100,6 +100,14 @@ function pages() {
                 <span className="mr-1">{order.itemQuantity}x</span>
                 {order.itemName}
               </span>
+              <span className="mr-2 text-muted">
+                <span className="mr-1">{order.itemQuantity}x</span>
+                {order.itemName}
+              </span>
+              <span className="mr-2 text-muted">
+                <span className="mr-1">5</span>
+              more
+              </span>
             </div>
             <canvas
               className="ink"

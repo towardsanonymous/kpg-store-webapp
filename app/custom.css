@@ -153,7 +153,7 @@
 
 .nearMe-button {
     margin-bottom: -40px;
-    background-image: url(https://img.icons8.com/material-rounded/48/bell--v1.png) !important;
+    background-image: url(https://i.imgur.com/6qgzU65.png) !important;
     background-repeat: no-repeat;
     background-size: 100%;
     text-indent: -9999px;
@@ -167,7 +167,7 @@
     border: 2px solid #f6f6f6;
     box-shadow: 0px 2px 5px 0px #6c757d;
     border-radius: 50%;
-    top: -27px;
+    top: -12px;
     width: 50px;
     height: 50px;
     align-items: center;
@@ -190,7 +190,7 @@
     margin-bottom: 20px;
     padding: 1.1rem;
     text-align: center;
-    padding-top: 3.8rem;
+    padding-top: 3.0rem;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -307,3 +307,66 @@ a {
     text-decoration: none;
     color: inherit; /* Ensures that the link color remains the same as its parent */
   }
+
+  .orders-tab-content {
+    min-height: 83vh;
+    background-color: #f7f8fb;
+    padding: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+
+.singleOrderRestaurantName {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.singleOrderUniqueOrderId {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.singleOrderOrderTime {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.singleOrderDeliveryType {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.custom-card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.singleOrderOrderStatus {
+    font-weight: 700;
+    color: #4caf50;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #fff;
+}
+
+.order-item-quantity {
+    border: 1px solid #e0e0e0;
+    padding: 2px 8px;
+    font-weight: 500;
+    min-width: 35px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.singleOrderCancelBtn {
+    font-size: 1.1rem;
+    background-color: #fff;
+    border: 1px solid #ff5722;
+    color: #ff5722;
+    width: 150px;
+}
+
+.btn:hover, .btn:focus {
+    text-decoration: none;
+}
