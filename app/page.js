@@ -1,95 +1,145 @@
+"use client"
 import Image from 'next/image'
 import styles from './page.module.css'
+import Footer from './components/Footer'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./custom.css"
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
+    <>
+     <div style={{ overflowY: 'auto', height: '100vh' }}>
+        <div className="dashboardTopBlock bg-primary-gradient">
+          <div className="mx-3">
+            <span>Hello,</span>
+            <div className="d-flex justify-content-between align-items-center">
+              <div>
+                <span className="dashboardSingleStoreName">test store</span>
+              </div>
+              <div className="d-flex flex-column align-items-center">
+
+              </div>
+              <img
+                src="https://store.titozz.in/assets/images/store-closed.png"
+                alt="Store is Closed"
+                className="storeClosedNotifyArrow"
+                style={{
+                  animationFillMode: 'both',
+                  animationDuration: '1000ms',
+                  animationDelay: '250ms',
+                  animationIterationCount: '1',
+                  opacity: '1',
+                  animationName: 'react-reveal-208273346347287-2',
+                }}
+              />
+            </div>
+          </div>
+          <div className="d-flex justify-content-between align-items-center position-relative mx-3" style={{ top: '60px' }}>
+            <div className="todayOrderDashboardCard" style={{ width: '48%' }}>
+              <div className="dashboard-stats-card p-3">
+                <div>
+                  <strong>0</strong>
+                  <br />
+                  <span className="text-muted">Orders Today</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="todayRevenueDashboardCard" style={{ width: '48%' }}>
+              <div className="dashboard-stats-card p-3">
+                <div>
+                  <strong>₹0</strong>
+                  <br />
+                  <span className="text-muted">Revenue Today</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div>
+          <div className="topSellingItemsBlock mx-2 p-3" style={{ marginTop: '4rem' }}>
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="topSellingTitle">Top Selling Today</div>
+              <img src="https://store.titozz.in/assets/images/medal.png" alt="top" style={{ width: '28px' }} />
+            </div>
+            <hr />
+            <span className="text-muted">No orders today</span>
+          </div>
+          </div>
+          <div className="position-relative mx-4 mt-4 mb-4">
+            <div className="d-flex justify-content-start p-3 new-order-notify-dashboard">
+              <div className="ringbell mr-3 text-danger">
+                <i className="si si-bell"></i>
+              </div>
+              <div className="d-flex justify-content-between w-100">
+                <div>You have <strong>1</strong> new orders.</div>
+                <div><i className="si si-arrow-right"></i></div>
+              </div>
+            </div>
+            <canvas
+              className="ink"
+              height="0"
+              width="0"
+              style={{
+                borderRadius: 'inherit',
+                height: '100%',
+                left: '0px',
+                position: 'absolute',
+                top: '0px',
+                width: '100%',
+              }}
+            ></canvas>
+          </div>
+
+    
+        <div className="d-flex justify-content-between align-items-center position-relative mx-3 dashboardTotalCardsBlock mb-5">
+          <div className="totalRevenueDashboardCard" style={{ width: '60%' }}>
+            <div className="dashboard-stats-card p-2">
+              <div>
+                <strong>₹8,413.90</strong>
+                <br />
+                <span className="text-muted">Total Revenue</span>
+                <span className="text-muted">
+                  {' '}
+                  with <span className="text-dark font-w600">81</span> Sales
+                </span>
+              </div>
+            </div>
+          </div>
           <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="position-relative inActiveItemDashboardCard"
+            href="/inactive-items"
+            style={{ width: '36%', color: 'white' , textDecoration: 'none' }}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+            <div className="p-3 dashboardInactiveItems">
+              <div>
+                <strong>33</strong>
+                <br />
+                <span>Inactive Items</span>
+              </div>
+            </div>
+            <canvas
+              className="ink"
+              height="0"
+              width="0"
+              style={{
+                borderRadius: 'inherit',
+                height: '100%',
+                left: '0px',
+                position: 'absolute',
+                top: '0px',
+                width: '100%',
+              }}
+            ></canvas>
           </a>
         </div>
+
+
+
+
+        <Footer />
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   )
 }
