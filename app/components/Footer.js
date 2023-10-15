@@ -22,87 +22,100 @@ export default function Footer() {
   };
 
   return (
-    <div
+<div
+  style={{
+    position: 'fixed',
+    bottom: 0,
+    width: '100%',
+    zIndex: 1000,
+    left: 0,
+    right: 0,
+    display: 'flex',
+    justifyContent: 'space-around',
+    background: '#fff', // Set your background color
+    boxShadow: '0px -2px 4px rgba(0, 0, 0, 0.1)', // Add a subtle shadow
+  }}
+>
+  <button
+    onClick={() => handleChange('/')}
     style={{
-      position: 'fixed',
-      bottom: 0,
-      width: '100%',
-      zIndex: 1000,
-      left: 0,
-      right: 0,
+      padding: '10px',
+      border: 'none',
+      background: 'none',
+      cursor: 'pointer',
       display: 'flex',
-      justifyContent: 'space-around',
-      background: '#fff', // Set your background color
-      boxShadow: '0px -2px 4px rgba(0, 0, 0, 0.1)', // Add a subtle shadow
+      flexDirection: 'column',
+      alignItems: 'center',
     }}
   >
-    <button
-      onClick={() => handleChange('/')}
-      style={{
-        padding: '10px',
-        border: 'none',
-        background: 'none',
-        cursor: 'pointer',
-      }}
-    >
-      <HomeIcon/>
-      Home
-    </button>
-    <button
-      onClick={() => handleChange('past')}
-      style={{
-        padding: '10px',
-        border: 'none',
-        background: 'none',
-        cursor: 'pointer',
-      }}
-    >
-      <WatchLaterOutlinedIcon/>
-      Past
-    </button>
-    <div>
-    <button
-      onClick={() => handleChange('notifications')}
-      style={{
-        padding: '10px',
-        border: 'none',
-        background: 'none',
-        cursor: 'pointer',
-      }}
-    >
-      <div className='nearMe-button'>
-      <NotificationsIcon/>
-    
-        
-      </div>
-      <span class="notification-badge" style={{"background-color":" rgb(255, 204, 0);"}}>5</span>
-      
-    </button>
-    </div>
-    <button
-      onClick={() => handleChange('menu')}
-      style={{
-        padding: '10px',
-        border: 'none',
-        background: 'none',
-        cursor: 'pointer',
-      }}
-    >
-      <ListIcon/>
-      Menu
-    </button>
-    <button
-      onClick={() => handleChange('setting')}
-      style={{
-        padding: '10px',
-        border: 'none',
-        background: 'none',
-        cursor: 'pointer',
-      }}
-    >
-      <SettingsIcon/>
-      Setting
-    </button>
-  </div>
+    <HomeIcon />
+    <span style={{ marginTop: '5px' }}>Home</span>
+  </button>
+  <button
+    onClick={() => handleChange('past')}
+    style={{
+      padding: '10px',
+      border: 'none',
+      background: 'none',
+      cursor: 'pointer',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    }}
+  >
+    <WatchLaterOutlinedIcon />
+    <span style={{ marginTop: '5px' }}>Past</span>
+  </button>
+  <button
+    className='position-relative'
+    onClick={() => handleChange('notifications')}
+    style={{
+      padding: '10px',
+      border: 'none',
+      background: 'none',
+      cursor: 'pointer',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    }}
+  >
+    <div className='nearMe-button'></div>
+    <span className="position-absolute  translate-middle badge rounded-pill bg-danger" style={{left:"55px" ,top:"-0.5rem"}}>
+      5
+    </span>
+
+  </button>
+  <button
+    onClick={() => handleChange('menu')}
+    style={{
+      padding: '10px',
+      border: 'none',
+      background: 'none',
+      cursor: 'pointer',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    }}
+  >
+    <ListIcon />
+    <span style={{ marginTop: '5px' }}>Menu</span>
+  </button>
+  <button
+    onClick={() => handleChange('setting')}
+    style={{
+      padding: '10px',
+      border: 'none',
+      background: 'none',
+      cursor: 'pointer',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    }}
+  >
+    <SettingsIcon />
+    <span style={{ marginTop: '5px' }}>Setting</span>
+  </button>
+</div>
+
   );
 }
