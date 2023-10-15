@@ -39,7 +39,7 @@ export default function Footer() {
   <button
     onClick={() => handleChange('/')}
     style={{
-      padding: '10px',
+      padding: '5px',
       border: 'none',
       background: 'none',
       cursor: 'pointer',
@@ -49,12 +49,12 @@ export default function Footer() {
     }}
   >
     <HomeIcon />
-    <span style={{ marginTop: '5px' }}>Home</span>
+    <span style={{ marginTop: '2px' }}>Home</span>
   </button>
   <button
     onClick={() => handleChange('past')}
     style={{
-      padding: '10px',
+      padding: '5px',
       border: 'none',
       background: 'none',
       cursor: 'pointer',
@@ -64,13 +64,13 @@ export default function Footer() {
     }}
   >
     <WatchLaterOutlinedIcon />
-    <span style={{ marginTop: '5px' }}>Past</span>
+    <span style={{ marginTop: '2px' }}>Past</span>
   </button>
   <button
     className='position-relative'
     onClick={() => handleChange('notifications')}
     style={{
-      padding: '10px',
+      padding: '5px',
       border: 'none',
       background: 'none',
       cursor: 'pointer',
@@ -80,7 +80,7 @@ export default function Footer() {
     }}
   >
     <div className='nearMe-button'></div>
-    <span className="position-absolute  translate-middle badge rounded-pill bg-danger" style={{left:"55px" ,top:"-0.5rem"}}>
+    <span className="position-absolute  translate-middle badge rounded-pill bg-danger" style={{left:"50px" ,top:"-0.5rem"}}>
       5
     </span>
 
@@ -88,7 +88,7 @@ export default function Footer() {
   <button
     onClick={() => handleChange('menu')}
     style={{
-      padding: '10px',
+      padding: '5px',
       border: 'none',
       background: 'none',
       cursor: 'pointer',
@@ -98,12 +98,12 @@ export default function Footer() {
     }}
   >
     <ListIcon />
-    <span style={{ marginTop: '5px' }}>Menu</span>
+    <span style={{ marginTop: '3px' }}>Menu</span>
   </button>
   <button
     onClick={() => handleChange('setting')}
     style={{
-      padding: '10px',
+      padding: '5px',
       border: 'none',
       background: 'none',
       cursor: 'pointer',
@@ -113,7 +113,7 @@ export default function Footer() {
     }}
   >
     <SettingsIcon />
-    <span style={{ marginTop: '5px' }}>Setting</span>
+    <span style={{ marginTop: '3px' }}>Setting</span>
   </button>
 </div>
 
