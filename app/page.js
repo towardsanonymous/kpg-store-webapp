@@ -4,12 +4,13 @@ import styles from './page.module.css'
 import Footer from './components/Footer'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./custom.css"
+import Switch from '@mui/material/Switch';
 
-
+const label = { inputProps: { 'aria-label': 'Color switch demo' } };
 export default function Home() {
   return (
     <>
-     <div style={{ overflowY: 'auto', height: '100vh' }}>
+      <div style={{ overflowY: 'auto', height: '100vh' }}>
         <div className="dashboardTopBlock bg-primary-gradient">
           <div className="mx-3">
             <span>Hello,</span>
@@ -18,7 +19,16 @@ export default function Home() {
                 <span className="dashboardSingleStoreName">test store</span>
               </div>
               <div className="d-flex flex-column align-items-center">
-
+                <Switch
+                  // checked={true}
+                  // onChange={()=>{
+                  //   console.log("switch clicked")
+                  // }}
+                //  inputProps={{ 'aria-label': 'controlled' }}
+                defaultChecked 
+                 inputProps={ { 'aria-label': 'Color switch demo' } }
+                  color='default'
+                />
               </div>
               <img
                 src="https://store.titozz.in/assets/images/store-closed.png"
@@ -66,33 +76,33 @@ export default function Home() {
             <hr />
             <span className="text-muted">No orders today</span>
           </div>
-          </div>
-          <div className="position-relative mx-4 mt-4 mb-4">
-            <div className="d-flex justify-content-start p-3 new-order-notify-dashboard">
-              <div className="ringbell mr-3 text-danger">
-                <i className="si si-bell"></i>
-              </div>
-              <div className="d-flex justify-content-between w-100">
-                <div>You have <strong>1</strong> new orders.</div>
-                <div><i className="si si-arrow-right"></i></div>
-              </div>
+        </div>
+        <div className="position-relative mx-4 mt-4 mb-4">
+          <div className="d-flex justify-content-start p-3 new-order-notify-dashboard">
+            <div className="ringbell mr-3 text-danger">
+              <i className="si si-bell"></i>
             </div>
-            <canvas
-              className="ink"
-              height="0"
-              width="0"
-              style={{
-                borderRadius: 'inherit',
-                height: '100%',
-                left: '0px',
-                position: 'absolute',
-                top: '0px',
-                width: '100%',
-              }}
-            ></canvas>
+            <div className="d-flex justify-content-between w-100">
+              <div>You have <strong>1</strong> new orders.</div>
+              <div><i className="si si-arrow-right"></i></div>
+            </div>
           </div>
+          <canvas
+            className="ink"
+            height="0"
+            width="0"
+            style={{
+              borderRadius: 'inherit',
+              height: '100%',
+              left: '0px',
+              position: 'absolute',
+              top: '0px',
+              width: '100%',
+            }}
+          ></canvas>
+        </div>
 
-    
+
         <div className="d-flex justify-content-between align-items-center position-relative mx-3 dashboardTotalCardsBlock mb-5">
           <div className="totalRevenueDashboardCard" style={{ width: '60%' }}>
             <div className="dashboard-stats-card p-2">
@@ -110,7 +120,7 @@ export default function Home() {
           <a
             className="position-relative inActiveItemDashboardCard"
             href="/inactive-items"
-            style={{ width: '36%', color: 'white' , textDecoration: 'none' }}
+            style={{ width: '36%', color: 'white', textDecoration: 'none' }}
           >
             <div className="p-3 dashboardInactiveItems">
               <div>

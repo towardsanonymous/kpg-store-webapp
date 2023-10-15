@@ -183,15 +183,127 @@
     font-size: 12px; /* Adjust the font size as needed */
   }
 
-  .notification-badge {
-    border-radius: 100%;
-    color: black;
-    background-color: #ffcc00 !important;
-    position: absolute;
-    top: -1.2rem;
-    left: 11.8rem;
-    font-size: 12px;
+  .pageTitle {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 1.1rem;
     text-align: center;
-    height: 18px;
-    width: 18px;
+    padding-top: 3.8rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
+
+.pageContents {
+    padding-top: 7.5rem;
+}
+
+.orders-tab-content {
+    min-height: 83vh;
+    background-color: #f7f8fb;
+    padding: 0.8rem;
+    margin-bottom: 5rem;
+}
+
+.mock-search-block--sticky {
+    position: sticky;
+    top: 35px;
+    z-index: 101;
+    background-color: transparent;
+}
+
+.mock-search-block {
+    background-color: #f8f9fa;
+}
+
+.searchMockInput, .itemSearchInput, .orderSearchInput {
+    background-color: #fff;
+    height: 3.8rem;
+    border-radius: 5px !important;
+    box-shadow: -1px 7px 10px -10px #ccc;
+    font-size: 14px;
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    align-items: center;
+    box-shadow: rgb(27 31 35 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset;
+}
+
+.mock-search-block > div {
+    background-color: #fff;
+    height: 3.5rem;
+    border-radius: 0.775rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 4px 10px -10px #ccc;
+    box-shadow: 0px 4px 10px -10px #ccc;
+}
+
+.singleOrderInList {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(27 31 35 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset;
+    display: flex;
+    align-items: center;
+}
+
+.singleOrderInList .orderTotal {
+    background-color: #27ae60;
+    padding: 2px 15px;
+    color: #fff;
+    font-weight: 500;
+    border-top: 0;
+    border-right: 0;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    border-radius: 2px;
+    min-width: 75px;
+    text-align: center;
+}
+
+.orderTimerWrapper {
+    padding: 2px 10px;
+    border-radius: 2px;
+    font-weight: 400;
+    border: 1px solid #eee;
+}
+
+.listSingleOrderStatus {
+    background-color: #f7f8fb;
+    padding: 2px 10px;
+    border-radius: 2px;
+    width: fit-content;
+    border: 1px solid #eee;
+    min-width: 75px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.orderList-orderItemsPreview > span {
+    background-color: #f7f8fb;
+    padding: 2px 10px;
+    border-radius: 2px;
+    width: fit-content;
+    border: 1px solid #eee;
+    min-width: 75px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.listSingleOrderStatus--canceled {
+    color: #e74c3c !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Ensures that the link color remains the same as its parent */
+  }
